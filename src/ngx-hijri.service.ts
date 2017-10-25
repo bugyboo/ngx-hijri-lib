@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
-import * as hijri from 'xsoh-hijri';
+import * as Xsoh from 'hijri-js';
 
 @Injectable()
 export class HijriService {
 
     public getResult(): string {
-        // const v = hj.basecal('12/12/2018', 1);
-        const v = hijri.default.prototype.toHijri('12/12/2018', '/');
-        return 'It works!! = ' + v;
+        const x = new Xsoh.default();
+        const h: Xsoh.HijriDate = x.today();
+        return 'It works!! = today is = ' + h.full
+        + ' GtoH = ' + x.toHijri('12122000', '').full
+        + ' HtoG = ' + x.toGregorian('11-7-1386', '-');
     }
 }
