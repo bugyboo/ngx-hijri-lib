@@ -56,19 +56,20 @@
     "tslint": "tslint"
   },
   "dependencies": {
-    "hijri-js": "^1.0.1"
+    "hijri-js": "^1.0.7"
   },
   "peerDependencies": {
     "@angular/common": "^4.0.0",
-    "@angular/core": "^4.0.0"
+    "@angular/core": "^4.0.0",
+    "hijri-js": "^1.0.7"
   },
   "devDependencies": {
     "@angular/cli": "1.5.0-rc.1",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
     "@angular/compiler-cli": "^4.0.0",
-    "@angular/language-service": "^4.2.4",
     "@angular/core": "^4.0.0",
+    "@angular/language-service": "^4.2.4",
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
     "@angular/router": "^4.2.4",
@@ -83,6 +84,7 @@
     "codecov": "^2.2.0",
     "codelyzer": "^3.0.1",
     "concurrently": "^3.4.0",
+    "core-js": "^2.4.1",
     "css-loader": "^0.28.1",
     "gh-pages": "^1.0.0",
     "gulp": "^3.9.1",
@@ -100,7 +102,6 @@
     "node-sass": "^4.5.2",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.6.1",
-    "core-js": "^2.4.1",
     "rxjs": "^5.3.1",
     "sass-loader": "^6.0.5",
     "source-map-explorer": "^1.3.3",
