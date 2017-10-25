@@ -55,21 +55,23 @@
     "test:watch": "karma start --auto-watch --no-single-run",
     "tslint": "tslint"
   },
-  "dependencies": {},
+  "dependencies": {
+    "hijri-js": "^1.0.1"
+  },
   "peerDependencies": {
     "@angular/common": "^4.0.0",
     "@angular/core": "^4.0.0"
   },
   "devDependencies": {
-    "@angular/cli": "1.5.0-rc.1",    
+    "@angular/cli": "1.5.0-rc.1",
     "@angular/common": "^4.0.0",
     "@angular/compiler": "^4.0.0",
     "@angular/compiler-cli": "^4.0.0",
-    "@angular/language-service": "^4.2.4",    
+    "@angular/language-service": "^4.2.4",
     "@angular/core": "^4.0.0",
     "@angular/platform-browser": "^4.0.0",
     "@angular/platform-browser-dynamic": "^4.0.0",
-    "@angular/router": "^4.2.4",    
+    "@angular/router": "^4.2.4",
     "@compodoc/compodoc": "^1.0.0-beta.9",
     "@types/jasmine": "^2.5.47",
     "@types/karma": "^1.7.0",
@@ -98,7 +100,7 @@
     "node-sass": "^4.5.2",
     "raw-loader": "^0.5.1",
     "rimraf": "^2.6.1",
-    "core-js": "^2.4.1",    
+    "core-js": "^2.4.1",
     "rxjs": "^5.3.1",
     "sass-loader": "^6.0.5",
     "source-map-explorer": "^1.3.3",
