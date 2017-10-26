@@ -1,26 +1,26 @@
 import { Injectable } from '@angular/core';
-import { hijriJS } from 'hijri-js';
-import * as Xsoh from 'hijri-js';
+import { HijriDate, HijriJs, Lang, LangFormat, default as Xsoh } from 'hijri-js';
+// import * as Xsoh from 'hijri-js';
 
 @Injectable()
 export class HijriService {
 
     public getResult(): string {
-        const x = new Xsoh.default();
+        const x = new Xsoh();
         console.log(' ==> ', x);
-        const h: hijriJS.HijriDate = x.today();
+        const h: HijriDate = x.today();
 
         console.log(' Foo ==> ', this.getFoo());
-
-        const f: hijriJS.Lang = new hijriJS.LangFormat();
 
         return 'It works!! = today is = ' + h.full
         + ' GtoH = ' + x.toHijri('12122000', '').full
         + ' HtoG = ' + x.toGregorian('11-7-1386', '-');
     }
 
-    public getFoo(): hijriJS.HijriJs {
-        const x: hijriJS.HijriJs = new Xsoh.default();
+    public getFoo(): Lang {
+        const x: Lang = new LangFormat();
+        x.prefix = 'Ar';
+        x.notation = 'B.c';
         return x;
     }
 }

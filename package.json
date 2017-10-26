@@ -56,12 +56,12 @@
     "tslint": "tslint"
   },
   "dependencies": {
-    "hijri-js": "^1.0.7"
+    "hijri-js": "^1.0.9"
   },
   "peerDependencies": {
     "@angular/common": "^4.0.0",
     "@angular/core": "^4.0.0",
-    "hijri-js": "^1.0.7"
+    "hijri-js": "^1.0.8"
   },
   "devDependencies": {
     "@angular/cli": "1.5.0-rc.1",
