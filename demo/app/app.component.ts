@@ -11,7 +11,7 @@ export class AppComponent {
   title = 'app';
 
   constructor( private service: HijriService ) {
-    this.title = service.getResult();
+    this.title = service.getToday().full;
   }
 
 }

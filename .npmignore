@@ -1,9 +1,12 @@
 # Node
 node_modules
 npm-debug.log
+.npmignore
+.editorconfig
 
 # Yarn
 yarn-error.log
+yarn.lock
 
 # JetBrains
 .idea/
@@ -20,9 +23,21 @@ Desktop.ini
 
 # Temporary files
 coverage/
-demo/
 docs
-tmp
+tmp/
 
-# Library files
+# tsconfig & build
+.angular-cli.json
+.travis.yml
+gulpfile.js
+karma-test-entry.ts
+karma.conf.ts
+tsconfig-aot.json
+tsconfig.json
+tslint.json
+webpack-test.config.ts 
+webpack-umd.config.ts
+
+# Source files
 src/
+demo/
