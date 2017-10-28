@@ -5,7 +5,7 @@
   "main": "./dist/index.umd.js",
   "module": "./dist/index.js",
   "typings": "./dist/index.d.ts",
-  "directories":{
+  "directories": {
     "dist": "dist",
     "types": "types"
   },
@@ -60,7 +60,7 @@
     "tslint": "tslint"
   },
   "dependencies": {
-    "hijri-js": "^1.0.15"
+    "hijri-js": "^1.0.21"
   },
   "peerDependencies": {
     "@angular/common": "^4.0.0",

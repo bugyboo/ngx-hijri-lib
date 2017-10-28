@@ -7,7 +7,7 @@ export class HijriService {
     private hijri: hijriLib.HijriJs;
 
     constructor() {
-        this.hijri = hijriLib.intilizeHijriJs();
+        this.hijri = hijriLib.initialize();
     }
 
     public getToday(): hijriLib.HijriDate {

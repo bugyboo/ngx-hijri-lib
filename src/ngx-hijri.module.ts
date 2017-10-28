@@ -1,10 +1,12 @@
 import { NgModule } from '@angular/core';
 import { HijriService } from './ngx-hijri.service';
+import { HijriComponent } from './ngx-component';
+import { HijriDirective } from './ngx-hijri.directive';
 
 @NgModule({
-    declarations: [],
+    declarations: [ HijriComponent, HijriDirective ],
     providers: [ HijriService ],
-    exports: []
+    exports: [ HijriComponent, HijriDirective ]
 })
 export class HijriModule {
 }
