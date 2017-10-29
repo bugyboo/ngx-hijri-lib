@@ -4,12 +4,29 @@
     Welcome to {{title}}!
   </h1>
   <div>
-    <span>Hijri Date = </span>
-    <hijri-js date="10/10/2010">12/12/2002</hijri-js>
+    <span>today is = </span>
+    <hijri-js format="full"></hijri-js>
   </div>
   <div>
-    <span hijri-js="13/12/2002">Tommorow is</span>
+    <span>Tommoro is = </span>
+    <hijri-js date="1/1/2018"></hijri-js>
   </div>
+  <div>
+    <span>After tommoro with splitter = </span>
+    <hijri-js date="30-10-2017" splitter="-" format="full"></hijri-js>
+  </div>
+  <div>
+    <span>Using pipes hijri</span>
+    <label>{{ '10-01-2001' | hijri:'-'}}</label>
+  </div>
+  <div>
+      <span>Using pipes gregorian</span>
+      <label>{{ '10/01/1430' | gregorian:'/'}}</label>
+  </div> 
+  <div>
+      <span>hijri to gregorian =</span>
+      <hijri-js hdate="10/01/1430"></hijri-js>
+  </div>   
 </div>
 
 

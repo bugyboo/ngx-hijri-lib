@@ -1,5 +1,5 @@
 import { Component, ElementRef, Renderer2,
-    AfterViewInit, ViewChild, ViewContainerRef, Input, DoCheck } from '@angular/core';
+    ViewChild, ViewContainerRef, Input, DoCheck } from '@angular/core';
 
 import { HijriService } from './ngx-hijri.service';
 import { HijriJs, HijriDate } from 'hijri-js';
@@ -7,36 +7,35 @@ import { HijriJs, HijriDate } from 'hijri-js';
 @Component({
     selector: 'hijri-js',
     template: `
-        <span hijri-js="{{today}}">
+        <span>
           <ng-content></ng-content>
-        </span> -
-        <span>{{ today | hijriDate:'/':'full'}}</span>
+        </span>
+        <span>{{ dateHolder | hijri:splitter:formatDate}}</span>
     `,
     exportAs: 'hijri'
 })
-export class HijriComponent implements AfterViewInit, DoCheck {
+export class HijriComponent implements DoCheck {
 
     @Input('date') inputDate: string;
 
-    today: string;
+    @Input('format') formatDate: string;
+
+    @Input('splitter') splitter: string = '/';
+
+    private dateHolder: string;
 
     constructor( private _elementRef: ElementRef,
                  private _renderer: Renderer2,
                  private _hijriService: HijriService) {
         const t = new Date();
-        this.today = t.getDate() + '/' + t.getMonth() + '/' + t.getFullYear();
-        console.log(' input date => ', this.inputDate);
-    }
-
-    ngAfterViewInit(): void {
-        console.log(' input date => ', this.inputDate);
-        console.log('const = elementRef == > ', this._elementRef.nativeElement);
+        this.dateHolder = t.getDate() + this.splitter +
+                  + (t.getMonth() + 1) + this.splitter +
+                  + t.getFullYear();
     }
 
     ngDoCheck(): void {
-        console.log(' input date => ', this.inputDate);
         if (this.inputDate) {
-            this.today = this.inputDate;
+            this.dateHolder = this.inputDate;
         }
     }
 

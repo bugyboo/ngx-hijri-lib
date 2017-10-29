@@ -10,6 +10,8 @@ export class AppComponent {
 
   title = 'app';
 
+  today = '10102017';
+
   constructor( private service: HijriService ) {
     this.title = service.getToday().full;
   }
