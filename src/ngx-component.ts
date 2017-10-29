@@ -1,5 +1,5 @@
 import { Component, ElementRef, Renderer2,
-    AfterViewInit, ViewChild, ViewContainerRef } from '@angular/core';
+    AfterViewInit, ViewChild, ViewContainerRef, Input, DoCheck } from '@angular/core';
 
 import { HijriService } from './ngx-hijri.service';
 import { HijriJs, HijriDate } from 'hijri-js';
@@ -7,32 +7,37 @@ import { HijriJs, HijriDate } from 'hijri-js';
 @Component({
     selector: 'hijri-js',
     template: `
-        <ng-content></ng-content>
-        <span #hijri>{{text}}</span>
+        <span hijri-js="{{today}}">
+          <ng-content></ng-content>
+        </span> -
+        <span>{{ today | hijriDate:'/':'full'}}</span>
     `,
     exportAs: 'hijri'
 })
-export class HijriComponent implements AfterViewInit {
+export class HijriComponent implements AfterViewInit, DoCheck {
 
-    @ViewChild('hijri', {read: ViewContainerRef}) content: ViewContainerRef;
+    @Input('date') inputDate: string;
 
-    title = 'YoYo!!';
-
-    oldText: string;
-
-    text: string = 'N/A';
+    today: string;
 
     constructor( private _elementRef: ElementRef,
                  private _renderer: Renderer2,
                  private _hijriService: HijriService) {
+        const t = new Date();
+        this.today = t.getDate() + '/' + t.getMonth() + '/' + t.getFullYear();
+        console.log(' input date => ', this.inputDate);
     }
 
     ngAfterViewInit(): void {
-        this.oldText = this._elementRef.nativeElement.outerText;
-        console.log('const = elementRef == > ', this._elementRef.nativeElement.outerText);
-        console.log('After = ViewContainer == > ', this.content.element.nativeElement);
-        console.log(' Outer Text = ', this.oldText);
-        this.text = this._hijriService.convertToHijri(this.oldText, '/').plain;
+        console.log(' input date => ', this.inputDate);
+        console.log('const = elementRef == > ', this._elementRef.nativeElement);
+    }
+
+    ngDoCheck(): void {
+        console.log(' input date => ', this.inputDate);
+        if (this.inputDate) {
+            this.today = this.inputDate;
+        }
     }
 
 }
