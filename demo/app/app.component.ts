@@ -8,12 +8,11 @@ import { HijriService } from '../../src';
 })
 export class AppComponent {
 
-  title = 'app';
+  title = 'app works!';
 
   today = '10102017';
 
   constructor( private service: HijriService ) {
-    this.title = service.getToday().full;
   }
 
 }
