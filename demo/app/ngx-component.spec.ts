@@ -30,11 +30,6 @@ describe('HijriComponent', () => {
     expect(app.title).toEqual('app works!');
   }));
 
-  it('should have today is equalt to"', async(() => {
-    const de = fixture.debugElement.query(By.css('.todayis'));
-    expect(de.parent.nativeElement.textContent).toEqual('today');
-  }));
-
 });
 
 /*

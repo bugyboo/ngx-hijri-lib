@@ -2,7 +2,7 @@ import { Pipe, PipeTransform} from '@angular/core';
 import { HijriService } from './ngx-hijri.service';
 
 @Pipe({
-    name: 'hijri',
+    name: 'h2g',
 })
 export class ToHijriPipe implements PipeTransform {
 
@@ -24,7 +24,7 @@ export class ToHijriPipe implements PipeTransform {
 }
 
 @Pipe({
-    name: 'gregorian',
+    name: 'g2h',
 })
 export class ToGregorianPipe implements PipeTransform {
 

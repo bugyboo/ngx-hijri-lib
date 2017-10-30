@@ -3059,9 +3059,9 @@ he@1.1.x:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/he/-/he-1.1.1.tgz#93410fd21b009735151f8868c2f271f3427e23fd"
 
-hijri-js@^1.0.21:
-  version "1.0.21"
-  resolved "https://registry.yarnpkg.com/hijri-js/-/hijri-js-1.0.21.tgz#a57aed59721f88e37d4d2bfae3ee7be0f981175f"
+hijri-js@^1.0.25:
+  version "1.0.25"
+  resolved "https://registry.yarnpkg.com/hijri-js/-/hijri-js-1.0.25.tgz#5145d7a147194aae5aa516293a29a6a39c76a4e9"
 
 hmac-drbg@^1.0.0:
   version "1.0.1"

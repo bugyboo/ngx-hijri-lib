@@ -5,16 +5,13 @@ import { HijriService } from './ngx-hijri.service';
 import { HijriJs, HijriDate } from 'hijri-js';
 
 @Component({
-    selector: 'hijri-js',
+    selector: 'h2g',
     template: `
-        <span>
-          <ng-content></ng-content>
-        </span>
-        <span>{{ dateHolder | hijri:splitter:formatDate}}</span>
+        <span>{{ dateHolder | h2g:splitter:formatDate }}</span>
     `,
-    exportAs: 'hijri'
+    exportAs: 'h2g'
 })
-export class HijriComponent implements DoCheck {
+export class H2GComponent implements DoCheck {
 
     @Input('date') inputDate: string;
 
@@ -29,8 +26,42 @@ export class HijriComponent implements DoCheck {
                  private _hijriService: HijriService) {
         const t = new Date();
         this.dateHolder = t.getDate() + this.splitter +
-                  + (t.getMonth() + 1) + this.splitter +
-                  + t.getFullYear();
+                       + (t.getMonth() + 1) + this.splitter +
+                        + t.getFullYear();
+    }
+
+    ngDoCheck(): void {
+        if (this.inputDate) {
+            this.dateHolder = this.inputDate;
+        }
+    }
+
+}
+
+@Component({
+    selector: 'g2h',
+    template: `
+        <span>{{ dateHolder | g2h:splitter:formatDate }}</span>
+    `,
+    exportAs: 'g2h'
+})
+export class G2HComponent implements DoCheck {
+
+    @Input('date') inputDate: string;
+
+    @Input('format') formatDate: string;
+
+    @Input('splitter') splitter: string = '/';
+
+    private dateHolder: string;
+
+    constructor( private _elementRef: ElementRef,
+                 private _renderer: Renderer2,
+                 private _hijriService: HijriService) {
+        const t = new Date();
+        this.dateHolder = t.getDate() + this.splitter +
+                       + (t.getMonth() + 1) + this.splitter +
+                        + t.getFullYear();
     }
 
     ngDoCheck(): void {

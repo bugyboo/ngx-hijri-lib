@@ -3,8 +3,8 @@ import { Directive, ElementRef, AfterViewInit, Input } from '@angular/core';
 import { HijriService } from './ngx-hijri.service';
 
 @Directive({
-    selector: '[hijri-js]',
-    exportAs: 'ngxHijriJs'
+    selector: '[h2g]',
+    exportAs: 'h2g'
 })
 export class HijriDirective implements AfterViewInit {
 
@@ -15,7 +15,7 @@ export class HijriDirective implements AfterViewInit {
     }
 
     ngAfterViewInit(): void {
-        console.log(' directive called...', this.inputDate);
+        console.log('No implementations yet!', this.inputDate);
     }
 
 }

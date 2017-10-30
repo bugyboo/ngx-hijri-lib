@@ -1,13 +1,12 @@
 import { NgModule } from '@angular/core';
 import { HijriService } from './ngx-hijri.service';
-import { HijriComponent } from './ngx-component';
-import { HijriDirective } from './ngx-hijri.directive';
+import { H2GComponent, G2HComponent } from './ngx-component';
 import { ToHijriPipe, ToGregorianPipe } from './ngx-hijri.pipe';
 
 @NgModule({
-    declarations: [ HijriComponent, HijriDirective, ToHijriPipe, ToGregorianPipe ],
+    declarations: [ H2GComponent, G2HComponent, ToHijriPipe, ToGregorianPipe ],
     providers: [ HijriService ],
-    exports: [ HijriComponent, HijriDirective, ToHijriPipe, ToGregorianPipe ]
+    exports: [ H2GComponent, G2HComponent, ToHijriPipe, ToGregorianPipe ]
 })
 export class HijriModule {
 }
