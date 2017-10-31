@@ -6,7 +6,7 @@
 
 Angular 2+ plugin for Hijri dates conversions. Date calculations based on [hijri-js](https://github.com/bugyboo/hijri-js) and [solarHijri-js](https://github.com/xsoh/solarHijri-js) libraries.
 
-This package provides components, pipes and service for Angular for the date conversions.
+This package provides components, pipes and service Angular for the date conversions.
 
 It's availble on plunker [plunker playground](https://embed.plnkr.co/THwo9r6rkf6GDWMoRCh4/)
 
@@ -87,7 +87,7 @@ In the project source code there is a directory named (demo) where you can run t
 
 the (src) directory contains the source code of this package.
 
-'''
+```
     git clone https://github.com/bugyboo/ngx-hijri-lib
     cd into ngx-...
 
@@ -96,4 +96,4 @@ the (src) directory contains the source code of this package.
 
     ng serve
 
-'''
+```
