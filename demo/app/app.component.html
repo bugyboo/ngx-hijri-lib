@@ -5,28 +5,29 @@
   </h1>
   <div>
     <span>today is = </span>
-    <h2g format="full" class="todayis"></h2g>
+    <g2h format="full" class="todayis"></g2h>
   </div>
   <div>
     <span>Tommoro is = </span>
-    <h2g date="1/1/2018"></h2g>
+    <g2h date="1/1/2018"></g2h>
   </div>
   <div>
     <span>After tommoro with splitter = </span>
-    <h2g date="30-10-2017" splitter="-" format="full"></h2g>
+    <g2h date="30-10-2017" splitter="-" format="full"></g2h>
   </div>
   <div>
     <span>Using pipes hijri</span>
-    <label>{{ '10-01-2001' | h2g:'-'}}</label>
+    <label>{{ '10-01-2001' | g2h:'-'}}</label>
   </div>
   <div>
       <span>Using pipes gregorian</span>
-      <label>{{ '10/01/1430' | g2h:'/'}}</label>
+      <label>{{ '10/01/1430' | h2g:'/'}}</label>
   </div> 
   <div>
       <span>hijri to gregorian =</span>
-      <g2h date="10/01/1430" format="full"></g2h>
-  </div>   
-</div>
+      <h2g date="10/01/1430" format="full"></h2g>
+  </div>    
+</div> 
+
 
 

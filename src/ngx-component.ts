@@ -28,6 +28,7 @@ export class H2GComponent implements DoCheck {
         this.dateHolder = t.getDate() + this.splitter +
                        + (t.getMonth() + 1) + this.splitter +
                         + t.getFullYear();
+        this.dateHolder = _hijriService.convertToHijri(this.dateHolder, this.splitter).plain;
     }
 
     ngDoCheck(): void {

@@ -1,6 +1,6 @@
 {
   "name": "ngx-hijri-lib",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "The Hijri Library for Angular",
   "main": "./dist/index.umd.js",
   "module": "./dist/index.js",
@@ -28,10 +28,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/bugyboo"
+    "url": "https://github.com/bugyboo/ngx-hijri-lib"
   },
   "bugs": {
-    "url": "https://github.com/bugyboo"
+    "url": "https://github.com/bugyboo/ngx-hijri-lib/issues"
   },
   "homepage": "https://github.com/bugyboo",
   "scripts": {
