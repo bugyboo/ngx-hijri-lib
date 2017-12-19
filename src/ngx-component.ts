@@ -19,7 +19,7 @@ export class H2GComponent implements DoCheck {
 
     @Input('splitter') splitter: string = '/';
 
-    private dateHolder: string;
+    dateHolder: string;
 
     constructor( private _elementRef: ElementRef,
                  private _renderer: Renderer2,
@@ -54,7 +54,7 @@ export class G2HComponent implements DoCheck {
 
     @Input('splitter') splitter: string = '/';
 
-    private dateHolder: string;
+    dateHolder: string;
 
     constructor( private _elementRef: ElementRef,
                  private _renderer: Renderer2,
